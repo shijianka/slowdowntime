@@ -18,6 +18,7 @@ public class ClientDemo {
             System.out.print((char) b);
             bufferedOutputStream.write(b);
         }
+        bufferedOutputStream.flush();
         socket.shutdownOutput();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String line;

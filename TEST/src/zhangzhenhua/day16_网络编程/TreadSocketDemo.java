@@ -17,7 +17,7 @@ public class TreadSocketDemo implements Runnable{
                 //创建网络接收流,从客户端读取数据
                 BufferedInputStream bis =new BufferedInputStream(accept.getInputStream());
                 //创建本地的流,把数据存到本地文件中
-                bos =new BufferedOutputStream(new FileOutputStream("C:\\root\\Cloud\\OneDrive\\root\\workSpace\\IDEA\\study_itheima\\advanced_day15\\src\\test\\"+ UUID.randomUUID().toString()+".java"));
+                bos =new BufferedOutputStream(new FileOutputStream("C:\\root\\Cloud\\OneDrive\\root\\workSpace\\IDEA\\study_itheima\\TEST\\src\\zhangzhenhua\\"+ UUID.randomUUID().toString()+".png"));
                 //将数据写入本地文件永久保存
                 int b;
                 while((b=bis.read())!=-1){
