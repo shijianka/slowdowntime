@@ -1,7 +1,11 @@
 package homework.com.itheima.reflect.context;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -15,6 +19,47 @@ public class ClasspathApplicationContext implements ApplicationContext {
     public ClasspathApplicationContext(String fileName) {
 
         // 补全代码
+        ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
+        InputStream inputStream = systemClassLoader.getResourceAsStream(fileName);
+        Properties properties = new Properties();
+        try {
+            properties.load(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Set<Map.Entry<Object, Object>> entries = properties.entrySet();
+        for (Map.Entry<Object, Object> entry : entries) {
+            Class clazz=null;
+            try {
+                clazz = Class.forName((String) entry.getValue());
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            Object o=null;
+            if(clazz!=null) {
+                Constructor constructor = null;
+                try {
+                    constructor = clazz.getConstructor();
+                } catch (NoSuchMethodException e) {
+                    e.printStackTrace();
+                }
+
+                try {
+                    o = constructor.newInstance();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+            if(o!=null) {
+                beans.put((String) entry.getValue(), o);
+            }
+        }
 
     }
 
