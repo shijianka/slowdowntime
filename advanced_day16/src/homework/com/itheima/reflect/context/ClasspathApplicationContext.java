@@ -67,6 +67,11 @@ public class ClasspathApplicationContext implements ApplicationContext {
     public <T> T getBean(Class<T> clazz) {
 
         // 补全代码
+        String name = clazz.getName();
+        T t1 = (T)beans.get(name);
+        if(t1!=null){
+            return  t1;
+        }
 
         return null;
     }
