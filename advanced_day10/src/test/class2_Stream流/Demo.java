@@ -1,5 +1,6 @@
 package test.class2_Stream流;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,8 +12,8 @@ import java.util.List;
  */
 public class Demo {
     public static void main(String[] args) {
-        ArrayList<String>list=new ArrayList<>(List.of("张三丰","张无忌","张翠山","王二狗","张三"));
-
+//        ArrayList<String>list=new ArrayList<String>(List("张三丰","张无忌","张翠山","王二狗","张三"));
+        ArrayList<String>list = new ArrayList<>();
         ArrayList<String> list2 = new ArrayList<>();
         for (String s : list) {
             if(s.startsWith("张")){

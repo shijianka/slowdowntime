@@ -27,7 +27,7 @@ public class PlayList {
                 "******************************************************");
         System.out.println("请输入对应的数字进行操作：");
         int choose = scanner.nextInt();
-        switch (choose) {
+       /* switch (choose) {
             case 1:
                 function.addMusicToMain();
                 break;
@@ -57,6 +57,6 @@ public class PlayList {
                 break;
             default:
                     System.out.println("输入有误");
-        }
+        }*/
     }
 }
