@@ -1,5 +1,8 @@
 package homework.双色球;
 
+/**
+ * Personnel是员工的标准类，属性 是 编号
+ */
 public class Personnel {
     private String id;
 
