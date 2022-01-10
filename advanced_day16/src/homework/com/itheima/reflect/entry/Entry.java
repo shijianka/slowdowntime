@@ -24,5 +24,4 @@ public class Entry {
         OrderService orderService2 = applicationContext.getBean(OrderService.class);
         System.out.println(orderService1 == orderService2);
     }
-
 }
