@@ -15,7 +15,7 @@ public class first {
         提示： File类中的length方法只能获取文件的大小。而文件夹的大小是文件夹下所有文件的总大小。
          */
 
-        if(!file.exists()&&file.isDirectory()){
+        if(!file.exists()||file.isDirectory()){
             return 0;
         }
         long result = 0;
