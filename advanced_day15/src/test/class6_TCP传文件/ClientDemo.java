@@ -9,13 +9,14 @@ public class ClientDemo {
 
         //本地流
         File file = new File("C:\\root\\Cloud\\OneDrive\\root\\workSpace\\IDEA\\study_itheima\\advanced_day15\\src\\test\\class6_TCP传文件\\img.png");
+//        File file = new File("src/test/class6_TCP传文件/q1.png");
         BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(file));
         //网络流
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(socket.getOutputStream());
 
         int b;
         while ((b=bufferedInputStream.read())!=-1){
-            System.out.print((char) b);
+//            System.out.print((char) b);
             bufferedOutputStream.write(b);
         }
         bufferedOutputStream.flush();
