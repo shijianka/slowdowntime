@@ -1,0 +1,5 @@
+-- 内连接
+    -- 隐式内连接
+    -- select 字段列表 from 表1，表2... where 条件;
+    -- 显式内连接
+    -- select 字段列表 from 表1 [inner] join 表2 on 条件;
