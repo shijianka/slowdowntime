@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="light" src="../imgs/img.png"><br>
+<div class="cls">船只教育</div><br>
+<div class="cls">程序员</div> <br>
+<input type="checkbox" name="hobby">电影
+<input type="checkbox" name="hobby">旅游
+<input type="checkbox" name="hobby">游戏
+<br>
+<script>
+    var img= document.getElementById("light");//根据id属性获取
+    alert(img);
+    var divs = document.getElementsByTagName("div");
+    /*for (let i = 0; i < divs.length; i++) {
+        alert(divs[i]);
+    }*/
+    var names = document.getElementsByName("hobby");
+    for (let i = 0; i < names.length; i++) {
+        alert(names[i]);
+    }
+    var clss = document.getElementsByClassName("cls");
+    for (let i = 0; i < clss.length; i++) {
+        alert(clss[i]);
+    }
+</script>
+</body>
+</html>

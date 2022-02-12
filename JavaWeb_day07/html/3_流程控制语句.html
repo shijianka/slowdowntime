@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流程控制语句</title>
+</head>
+<body>
+<div>if</div>
+<div>switch</div>
+<div>for</div>
+<div>while</div>
+<div>do</div>
+<script>
+    //1 if
+    var count = 3;
+    if (count++ == 3) {
+        alert(count--);
+    }
+    alert(count)
+    //2 switch
+    var count = 9;
+    switch (count) {
+        case 1: {
+            alert("星期1");
+            break;
+        }
+        case 2: {
+            alert("星期2");
+            break;
+        }
+        case 3: {
+            alert("星期3");
+            break;
+        }
+        case 4: {
+            alert("星期4");
+            break;
+        }
+        case 5: {
+            alert("星期5");
+            break;
+        }
+        case 6: {
+            alert("星期6");
+            break;
+        }
+        case 7: {
+            alert("星期7");
+            break;
+        }
+
+        default: {
+            alert("您输入有误！");
+            break;
+        }
+    }
+
+    //3 for
+    var sum = 0 ;
+    for (let i  =1;i<=100;i++){
+        sum+=i;
+    }
+    alert(sum);
+    //4 while
+    var sum = 0;
+    var i =1;
+    while(i <= 100){
+        sum += i;
+        i++;
+    }
+    alert(sum);
+
+    // 5 do...while
+
+</script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+/*
 package test;
 
 import cn.shijianka.time.Time;
@@ -20,3 +21,4 @@ public class 测试哈希工具类 {
         System.out.println(l+"ms");
     }
 }
+*/

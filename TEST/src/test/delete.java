@@ -1,3 +1,4 @@
+/*
 package test;
 
 import cn.shijianka.file.DeleteFile;
@@ -25,3 +26,4 @@ public class delete {
         }
     }
 }
+*/
