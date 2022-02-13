@@ -1,6 +1,6 @@
 package homework.双色球;
 
-import cn.shijianka.time.Time;
+
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
@@ -15,7 +15,7 @@ public class Start {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //创建员工集合
-        Time.timeTest();
+
         ArrayList<Personnel> listPersonnel = new ArrayList<>();
         for (int i = 1; i <= 100; i++) {
             listPersonnel.add(new Personnel(i + ""));
@@ -48,8 +48,8 @@ public class Start {
         //输出返回值
         System.out.println(future1.get());
         System.out.println(future2.get());
-       long times= Time.timeTest();
-        System.out.println(times);
+
+
 
     }
 }

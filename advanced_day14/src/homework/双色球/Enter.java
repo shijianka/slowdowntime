@@ -25,11 +25,11 @@ public class Enter extends Thread {
         while (true) {
             //若门内有人（阻塞队列里面的元素未被取出），则continue，再次判断会场外是否还有人（list是否为空）
             if(lock[0]){
-                try {
+             /*   try {
                     sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                }*/
 
                 continue;
             }
